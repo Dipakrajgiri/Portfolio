@@ -1,0 +1,101 @@
+export type SkillCategory = {
+  category: string;
+  icon: string;
+  skills: string[];
+};
+
+export const skills: SkillCategory[] = [
+  {
+    category: "AI & Machine Learning",
+    icon: "Brain",
+    skills: [
+      "TensorFlow",
+      "Keras",
+      "Scikit-learn",
+      "Pandas",
+      "NumPy",
+      "CNN",
+      "RNN",
+      "Transformers",
+      "DistilBERT",
+      "LangChain",
+      "RAG",
+      "NLP",
+      "Image Processing",
+    ],
+  },
+  {
+    category: "Backend Development",
+    icon: "Server",
+    skills: [
+      "FastAPI",
+      "Node.js",
+      "Express.js",
+      "REST APIs",
+      "JWT Authentication",
+      "PostgreSQL",
+      "MongoDB",
+      "WebSockets",
+    ],
+  },
+  {
+    category: "Frontend Development",
+    icon: "Monitor",
+    skills: ["React.js", "JavaScript", "HTML5", "CSS3", "Tailwind CSS"],
+  },
+  {
+    category: "AWS Cloud Architecture",
+    icon: "Cloud",
+    skills: [
+      "EC2",
+      "Auto Scaling",
+      "ELB",
+      "VPC",
+      "S3",
+      "EBS",
+      "EFS",
+      "RDS",
+      "DynamoDB",
+      "Aurora",
+      "ECS",
+      "EKS",
+      "Lambda",
+      "API Gateway",
+      "CloudFront",
+      "Route 53",
+      "IAM",
+      "KMS",
+      "WAF",
+      "Shield",
+      "CloudWatch",
+      "CloudTrail",
+      "Cost Explorer",
+      "Trusted Advisor",
+    ],
+  },
+  {
+    category: "DevOps & Automation",
+    icon: "GitBranch",
+    skills: [
+      "Docker",
+      "GitHub Actions",
+      "CI/CD Pipelines",
+      "Linux",
+      "CloudFormation",
+      "IaC",
+    ],
+  },
+  {
+    category: "Security",
+    icon: "Shield",
+    skills: [
+      "IAM Governance",
+      "Identity Federation",
+      "Network Security Architecture",
+      "Security Groups & NACL",
+      "Ethical Hacking",
+      "Secure Coding",
+      "Cryptography",
+    ],
+  },
+];

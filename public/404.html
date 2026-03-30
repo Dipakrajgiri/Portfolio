@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting…</title>
+    <script>
+      // GitHub Pages SPA redirect for HashRouter
+      // When GitHub Pages serves a 404 for /Portfolio/about,
+      // this redirects to /Portfolio/#/about so the SPA can handle it.
+      (function () {
+        var repo = '';
+        var l = window.location;
+        var path = l.pathname.replace(repo, '');
+        if (path && path !== '/') {
+          l.replace(
+            l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+            repo + '/#' + path +
+            (l.search || '') +
+            (l.hash || '')
+          );
+        } else {
+          l.replace(
+            l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+            repo + '/'
+          );
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <p>Redirecting…</p>
+  </body>
+</html>

@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+@theme {
+  /* === Color Palette: Glacier Calm (Icy Blue) === */
+  --color-bg: #0B1521;
+  --color-surface: #0F1D2E;
+  --color-surface-hover: #142639;
+  --color-border: #1B3048;
+  --color-border-hover: #245070;
+  --color-accent: #56B4E8;
+  --color-accent-muted: #3A8FBF;
+  --color-accent-glow: rgba(86, 180, 232, 0.12);
+  --color-accent-bright: #7DD3FC;
+  --color-text-primary: #E8F1F8;
+  --color-text-secondary: #9DB8CE;
+  --color-text-muted: #5A7A94;
+  --color-highlight: #7DD3FC;
+  --color-success: #4ADE80;
+  --color-teal: #2DD4BF;
+
+  /* === Font Families === */
+  --font-heading: "DM Serif Display", Georgia, serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  /* === Spacing Scale === */
+  --spacing-section: 6rem;
+  --spacing-section-sm: 4rem;
+
+  /* === Border Radius === */
+  --radius-card: 0.75rem;
+  --radius-badge: 0.375rem;
+  --radius-button: 0.5rem;
+
+  /* === Z-Index === */
+  --z-nav: 50;
+  --z-modal: 100;
+  --z-overlay: 90;
+}
+
+/* === Global Base Styles === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  font-weight: 400;
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* === Typography === */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+  margin: 0;
+  color: var(--color-text-primary);
+}
+
+p {
+  margin: 0;
+  color: var(--color-text-secondary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+/* === Scrollbar Styling === */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) var(--color-bg);
+}
+
+/* === Selection === */
+::selection {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+/* === Utility Classes === */
+.container-main {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container-main {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* === Section Divider === */
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--color-border) 20%,
+    var(--color-border) 80%,
+    transparent 100%
+  );
+  opacity: 0.5;
+}
+
+/* === Line Clamp Utility === */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
